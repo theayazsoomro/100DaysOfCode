@@ -62,3 +62,46 @@ const createPerson = (name, age, gender) => {
     gender,
   };
 };
+
+/***********************
+ ***** Day 2 of 100 *****
+ ************************/
+// Q1: Concise Declarative Functions with ES6
+const bicycle = {
+  gear: 2,
+  // Concise function within object
+  setGear(newGear) {
+    this.gear = newGear;
+  }
+};
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+// Q2: ES6 Class Syntax to Define a Constructor Function
+class Vegetable{
+  constructor(carrot){
+    this.name = carrot;
+    return carrot;
+  }
+}
+const carrot = new Vegetable('carrot');
+console.log(carrot.name);
+
+// Q3: Getters and Setters in ES6 Class
+class Thermostat{
+  constructor(fahrenheit){
+    this._fahrenheit = fahrenheit;
+  }
+  // getter
+  get temperature(){
+    return 5 / 9 * (this._fahrenheit - 32);
+  }
+  // setter
+  set temperature(celsius){
+    this._fahrenheit = celsius * 9 / 5 + 32;
+  }
+}
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius
