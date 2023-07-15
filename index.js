@@ -72,36 +72,64 @@ const bicycle = {
   // Concise function within object
   setGear(newGear) {
     this.gear = newGear;
-  }
+  },
 };
 bicycle.setGear(3);
 console.log(bicycle.gear);
 
 // Q2: ES6 Class Syntax to Define a Constructor Function
-class Vegetable{
-  constructor(carrot){
+class Vegetable {
+  constructor(carrot) {
     this.name = carrot;
     return carrot;
   }
 }
-const carrot = new Vegetable('carrot');
+const carrot = new Vegetable("carrot");
 console.log(carrot.name);
 
 // Q3: Getters and Setters in ES6 Class
-class Thermostat{
-  constructor(fahrenheit){
+// Program for getting temperature in degree Celsius
+class Thermostat {
+  constructor(fahrenheit) {
     this._fahrenheit = fahrenheit;
   }
   // getter
-  get temperature(){
-    return 5 / 9 * (this._fahrenheit - 32);
+  get temperature() {
+    return (5 / 9) * (this._fahrenheit - 32);
   }
   // setter
-  set temperature(celsius){
-    this._fahrenheit = celsius * 9 / 5 + 32;
+  set temperature(celsius) {
+    this._fahrenheit = (celsius * 9) / 5 + 32;
   }
 }
 const thermos = new Thermostat(76); // Setting in Fahrenheit scale
 let temp = thermos.temperature; // 24.44 in Celsius
 thermos.temperature = 26;
 temp = thermos.temperature; // 26 in Celsius
+
+/***********************
+ ***** Day 3 of 100 *****
+ ************************/
+// Q1: Export to Share a Code Block in ES6
+const uppercaseString = (string) => {
+  return string.toUpperCase();
+};
+const lowercaseString = (string) => {
+  return string.toLowerCase();
+};
+export { uppercaseString, lowercaseString };
+
+// Q2: Reuse JavaScript Code Using import
+import { uppercaseString, lowercaseString } from "./string_functions.js";
+uppercaseString("hello");
+lowercaseString("WORLD!");
+
+// Q3: Use * to Import Everything from a File
+import * as stringFunctions from './string_functions.js';
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
+
+// Q4: Create an Export Fallback with export default
+export default function subtract(x, y) {
+  return x - y;
+}
