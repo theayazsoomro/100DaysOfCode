@@ -125,7 +125,7 @@ uppercaseString("hello");
 lowercaseString("WORLD!");
 
 // Q3: Use * to Import Everything from a File
-import * as stringFunctions from './string_functions.js';
+import * as stringFunctions from "./string_functions.js";
 stringFunctions.uppercaseString("hello");
 stringFunctions.lowercaseString("WORLD!");
 
@@ -133,3 +133,11 @@ stringFunctions.lowercaseString("WORLD!");
 export default function subtract(x, y) {
   return x - y;
 }
+
+/***********************
+ ***** Day 4 of 100 *****
+ ************************/
+// Q1: Create a JavaScript Promise
+const makeServerRequest = new Promise((resolve, reject) => {
+  // Your code goes here.
+});
