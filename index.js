@@ -141,3 +141,16 @@ export default function subtract(x, y) {
 const makeServerRequest = new Promise((resolve, reject) => {
   // Your code goes here.
 });
+
+/***********************
+ ***** Day 5 of 100 *****
+ ************************/
+// Q1: Promise with resolve and reject methods
+ const serverRequest = new Promise((resolve, reject) => {
+  let responseFromServer;
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {  
+    reject("Data not received");
+  }
+});
