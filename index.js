@@ -146,11 +146,45 @@ const makeServerRequest = new Promise((resolve, reject) => {
  ***** Day 5 of 100 *****
  ************************/
 // Q1: Promise with resolve and reject methods
- const serverRequest = new Promise((resolve, reject) => {
+const serverRequest = new Promise((resolve, reject) => {
   let responseFromServer;
-  if(responseFromServer) {
+  if (responseFromServer) {
     resolve("We got the data");
-  } else {  
+  } else {
     reject("Data not received");
   }
 });
+
+/***********************
+ ***** Day 6 of 100 *****
+ ************************/
+// Q1: Handle a Fulfilled Promise with then
+const fulfilledPromise = new Promise((resolve, reject) => {
+  let responseFromServer = true;
+  if (responseFromServer) {
+    resolve("We got the data");
+  } else {
+    reject("Data not received");
+  }
+}).then((result) => {
+  console.log(result);
+});
+
+/***********************
+ ***** Day 7 of 100 *****
+ ************************/
+// Q1: Handle a Rejected Promise with catch
+const rejectedPromise = new Promise((resolve, reject) => {
+  let responseFromServer = false;
+  if (responseFromServer) {
+    resolve("We got the data");
+  } else {
+    reject("Data not received");
+  }
+})
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
