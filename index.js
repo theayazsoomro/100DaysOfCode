@@ -188,3 +188,21 @@ const rejectedPromise = new Promise((resolve, reject) => {
   .catch((error) => {
     console.log(error);
   });
+
+/***********************
+ ***** Day 8 of 100 *****
+ ************************/
+// Q1: Test Method | It returns true if pattern find something
+let myString = "Hello, World!";
+let myRegex = /Hello/;
+console.log(myRegex.test(myString));
+
+// Q2: Match a Literal String with OR | operator in Regex
+let petString = "James has a pet cat.";
+let petRegex = /dog|bird|cat|fish/;
+console.log(petRegex.test(petString));
+
+// Q3: i flag will ignore case-sensitivity
+let myString2 = "Hello, World";
+let fccRegex = /world/i;
+console.log(fccRegex.test(myString2));
