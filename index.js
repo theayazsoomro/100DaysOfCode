@@ -206,3 +206,11 @@ console.log(petRegex.test(petString));
 let myString2 = "Hello, World";
 let fccRegex = /world/i;
 console.log(fccRegex.test(myString2));
+
+/***********************
+ ***** Day 9 of 100 *****
+ ************************/
+// Q1: Find actual matches with .match() method
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/;
+console.log(extractStr.match(codingRegex));
