@@ -214,3 +214,26 @@ console.log(fccRegex.test(myString2));
 let extractStr = "Extract the word 'coding' from this string.";
 let codingRegex = /coding/;
 console.log(extractStr.match(codingRegex));
+
+/***********************
+ ***** Day 10 of 100 *****
+ ************************/
+// Q1: Find More Than the One Match with i and g flags
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /Twinkle/ig;
+console.log(twinkleStar.match(starRegex));
+
+// Q2: Match Anything with Wildcard Period . Dot character
+let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /.un/;
+console.log(unRegex.test(exampleStr));
+
+// Q3: Match Single Character with Multiple Possibilities by Using Character Class []
+let quote = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[aeiou]/gi;
+console.log(quote.match(vowelRegex)); // Return array of 25 vowels
+
+// Q4: Match Letters of the Alphabet with Hyphen - Character
+let quoteSample = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi; // Change this line
+console.log(quoteSample.match(alphabetRegex)); // Change this line
