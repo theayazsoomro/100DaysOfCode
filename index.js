@@ -220,7 +220,7 @@ console.log(extractStr.match(codingRegex));
  ************************/
 // Q1: Find More Than the One Match with i and g flags
 let twinkleStar = "Twinkle, twinkle, little star";
-let starRegex = /Twinkle/ig;
+let starRegex = /Twinkle/gi;
 console.log(twinkleStar.match(starRegex));
 
 // Q2: Match Anything with Wildcard Period . Dot character
@@ -229,11 +229,34 @@ let unRegex = /.un/;
 console.log(unRegex.test(exampleStr));
 
 // Q3: Match Single Character with Multiple Possibilities by Using Character Class []
-let quote = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let quote =
+  "Beware of bugs in the above code; I have only proved it correct, not tried it.";
 let vowelRegex = /[aeiou]/gi;
 console.log(quote.match(vowelRegex)); // Return array of 25 vowels
 
 // Q4: Match Letters of the Alphabet with Hyphen - Character
 let quoteSample = "The quick brown fox jumps over the lazy dog.";
-let alphabetRegex = /[a-z]/gi; // Change this line
-console.log(quoteSample.match(alphabetRegex)); // Change this line
+let alphabetRegex = /[a-z]/gi;
+console.log(quoteSample.match(alphabetRegex));
+
+/***********************
+ ***** Day 11 of 100 *****
+ ************************/
+// Q1: States in React Native
+import { useState } from "react";
+const App = () => {
+  const [inputText, setInputText] = useState("");
+  const handleTask = (txt) => {
+    setInputText(txt);
+  };
+  const TextInputAttributes = {
+    placeholder: "Add Task Here...",
+    value: inputText,
+  };
+  return (
+    <View style={styles.container}>
+      <TextInput {...TextInputAttributes} onChangeText={handleTask} />
+    </View>
+  );
+};
+export { App };
