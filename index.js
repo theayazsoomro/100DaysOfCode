@@ -260,3 +260,8 @@ const App = () => {
   );
 };
 export { App };
+
+/***********************
+ ***** Day 12 of 100 *****
+ ************************/
+// Working on an other project
