@@ -319,4 +319,4 @@ export { App };
 /***********************
  ***** Day 23 of 100 *****
  ************************/
-// Working on an other projects
+// Working on an other project
